@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  font-size: 100%;
+}
+
+.content {
+  padding: 20px;
+  width: 500px;
+}
+
+.paragraph {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
