@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #333;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.menu > li {
+  display: inline-block;
+  margin: 0 12px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.menu > li:hover .sub-menu {
+  visibility: visible;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 50px;
+  left: -5px;
+  width: 140px;
+  background: #fff;
+  visibility: hidden;
+}
+
+.sub-menu a {
+  color: #333;
+  font-size: 1.2rem;
+  display: block;
+  padding: 8px 16px;
+  border-bottom: 1px solid #ccc;
+}
+.sub-menu li:hover {
+  background: #ddd;
+}
