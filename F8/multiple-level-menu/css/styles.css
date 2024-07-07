@@ -19,11 +19,14 @@ body {
 .menu > li {
   display: inline-block;
   margin: 0 12px;
-  position: relative;
   padding-bottom: 20px;
 }
 
-.menu > li:hover .sub-menu {
+.menu li {
+  position: relative;
+}
+
+.menu li:hover > .sub-menu {
   visibility: visible;
 }
 
@@ -45,4 +48,10 @@ body {
 }
 .sub-menu li:hover {
   background: #ddd;
+}
+
+.sub-menu .sub-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
 }
