@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 10px;
+      }
+      .heading {
+        text-align: center;
+        position: relative;
+        padding: 5px;
+      }
+
+      .heading::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        width: 40px;
+        height: 5px;
+        background-color: #042c56;
+        border-radius: 999px;
+      }
+
+      /* 
+      p::first-line -> dòng đầu tiên của văn bản
+      p::first-letter -> chữ cái đầu tiên
+      p::first-section -> vùng được dùng chuột để bôi chọn lên.
+      p::marker -> dấu của thẻ li.
+    */
+
+      .date {
+        width: 300px;
+        position: relative;
+        font-size: 32px;
+      }
+      .date::before {
+        display: inline-block;
+        position: relative;
+        top: -5px;
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: orange;
+        border-radius: 999px;
+        margin-right: 10px;
+      }
+
+      .date::after {
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        content: '';
+        display: inline-block;
+        height: 5px;
+        width: 80%;
+        background: #ccc;
+        border-radius: 999px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="heading">How it Works?</h2>
+
+    <h2 class="date">07 July 2024</h2>
+  </body>
+</html>
