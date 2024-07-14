@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        counter-reset: heading;
+        font-family: SF-Mono, sans-serif;
+      }
+
+      .content {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        counter-increment: heading;
+        counter-reset: sub-heading;
+      }
+      h1::before {
+        content: counter(heading) ". "
+      }
+
+      h2 {
+        counter-increment: sub-heading;
+      }
+
+      h2::before {
+        content: counter(heading) "." counter(sub-heading) " - "
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores ad
+        mollitia incidunt molestiae commodi illo asperiores expedita aliquam
+        minima eius nisi rerum modi temporibus in at, eaque itaque dicta? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Sit itaque adipisci
+        ad, quod iure ducimus minus incidunt dolore eum exercitationem ipsum
+        odit inventore dolorem laudantium necessitatibus hic molestias officiis
+        nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Similique molestiae laboriosam fuga molestias, numquam provident dicta
+        reiciendis voluptatem dolores minus dolore? Doloribus qui libero, quod
+        minus nostrum perspiciatis obcaecati porro repudiandae hic quam fuga.
+        Saepe, sequi cum unde exercitationem officiis nostrum cumque repellendus
+        inventore eaque ab adipisci reiciendis illum dolor nesciunt, commodi,
+        non quod officia libero? Excepturi iusto magni reiciendis dolor aperiam
+        voluptates. Architecto odio quas ea eligendi harum? Eligendi soluta
+        iusto voluptatibus veritatis suscipit delectus numquam aperiam possimus
+        cumque, impedit recusandae voluptatum ducimus, sequi quisquam porro
+        quas, provident debitis maxime? Omnis optio, nesciunt doloremque alias
+        nobis quo commodi voluptas.
+      </p>
+      <hr />
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores ad
+        mollitia incidunt molestiae commodi illo asperiores expedita aliquam
+        minima eius nisi rerum modi temporibus in at, eaque itaque dicta? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Sit itaque adipisci
+        ad, quod iure ducimus minus incidunt dolore eum exercitationem ipsum
+        odit inventore dolorem laudantium necessitatibus hic molestias officiis
+        nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Similique molestiae laboriosam fuga molestias, numquam provident dicta
+        reiciendis voluptatem dolores minus dolore? Doloribus qui libero, quod
+        minus nostrum perspiciatis obcaecati porro repudiandae hic quam fuga.
+        Saepe, sequi cum unde exercitationem officiis nostrum cumque repellendus
+        inventore eaque ab adipisci reiciendis illum dolor nesciunt, commodi,
+        non quod officia libero? Excepturi iusto magni reiciendis dolor aperiam
+        voluptates. Architecto odio quas ea eligendi harum? Eligendi soluta
+        iusto voluptatibus veritatis suscipit delectus numquam aperiam possimus
+        cumque, impedit recusandae voluptatum ducimus, sequi quisquam porro
+        quas, provident debitis maxime? Omnis optio, nesciunt doloremque alias
+        nobis quo commodi voluptas.
+      </p>
+      <hr />
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores ad
+        mollitia incidunt molestiae commodi illo asperiores expedita aliquam
+        minima eius nisi rerum modi temporibus in at, eaque itaque dicta? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Sit itaque adipisci
+        ad, quod iure ducimus minus incidunt dolore eum exercitationem ipsum
+        odit inventore dolorem laudantium necessitatibus hic molestias officiis
+        nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Similique molestiae laboriosam fuga molestias, numquam provident dicta
+        reiciendis voluptatem dolores minus dolore? Doloribus qui libero, quod
+        minus nostrum perspiciatis obcaecati porro repudiandae hic quam fuga.
+        Saepe, sequi cum unde exercitationem officiis nostrum cumque repellendus
+        inventore eaque ab adipisci reiciendis illum dolor nesciunt, commodi,
+        non quod officia libero? Excepturi iusto magni reiciendis dolor aperiam
+        voluptates. Architecto odio quas ea eligendi harum? Eligendi soluta
+        iusto voluptatibus veritatis suscipit delectus numquam aperiam possimus
+        cumque, impedit recusandae voluptatum ducimus, sequi quisquam porro
+        quas, provident debitis maxime? Omnis optio, nesciunt doloremque alias
+        nobis quo commodi voluptas.
+      </p>
+      <hr />
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maiores ad
+        mollitia incidunt molestiae commodi illo asperiores expedita aliquam
+        minima eius nisi rerum modi temporibus in at, eaque itaque dicta? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Sit itaque adipisci
+        ad, quod iure ducimus minus incidunt dolore eum exercitationem ipsum
+        odit inventore dolorem laudantium necessitatibus hic molestias officiis
+        nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Similique molestiae laboriosam fuga molestias, numquam provident dicta
+        reiciendis voluptatem dolores minus dolore? Doloribus qui libero, quod
+        minus nostrum perspiciatis obcaecati porro repudiandae hic quam fuga.
+        Saepe, sequi cum unde exercitationem officiis nostrum cumque repellendus
+        inventore eaque ab adipisci reiciendis illum dolor nesciunt, commodi,
+        non quod officia libero? Excepturi iusto magni reiciendis dolor aperiam
+        voluptates. Architecto odio quas ea eligendi harum? Eligendi soluta
+        iusto voluptatibus veritatis suscipit delectus numquam aperiam possimus
+        cumque, impedit recusandae voluptatum ducimus, sequi quisquam porro
+        quas, provident debitis maxime? Omnis optio, nesciunt doloremque alias
+        nobis quo commodi voluptas.
+      </p>
+    </div>
+  </body>
+</html>
