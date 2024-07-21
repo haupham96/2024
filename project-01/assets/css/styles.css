@@ -24,7 +24,7 @@ body {
 }
 
 .btn {
-  border-radius: 8px;
+  border-radius: 12px;
   background: var(--primary-color);
   min-width: 98px;
   color: #fff;
@@ -44,7 +44,7 @@ a {
   text-decoration: none;
 }
 
-/* Header */
+/* ================================ Header ============================ */
 .header {
   position: relative;
   background: #e6f0ff;
@@ -89,6 +89,7 @@ a {
 .navbar .action-btn {
   padding: 13px 16px;
   margin-left: 18px;
+  border-radius: 8px;
 }
 
 /* Hero */
@@ -134,4 +135,212 @@ a {
   position: absolute;
   bottom: 0;
   right: calc((100vw - 1110px) / 2 - 100px);
+}
+
+/* ================================ Clients ============================ */
+.clients {
+  margin-top: 122px;
+}
+
+.clients .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients .desc {
+  color: #7d8589;
+  text-align: right;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.25; /* 125% */
+}
+
+.clients .row-desc {
+  margin-top: 23px;
+}
+
+.clients .images {
+  margin-top: 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================================ Guides ============================ */
+.guides {
+  margin-top: 200px;
+}
+
+.guides .sub-title {
+  color: #000339;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1; /* 100% */
+  position: relative;
+}
+
+.guides .sub-title::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  width: 41px;
+  height: 4px;
+  border-radius: 12px;
+  background: #000339;
+}
+
+.guides .desc {
+  margin: 20px auto 0;
+  width: 459px;
+  max-width: 100%;
+  color: #5a6473;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3rem; /* 187.5% */
+}
+
+.list-guide {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.guide-item {
+  margin: 0 70px;
+  text-align: center;
+}
+
+.guide-item .title {
+  margin-top: 26px;
+  color: #3b3c45;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.2rem; /* 110% */
+}
+
+.guide-item .link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0689ff;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.guide-item .link img {
+  margin-left: 6px;
+}
+
+.guide-cta {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.guide-cta .btn {
+  min-width: 170px;
+}
+
+/* ================================ Features ============================ */
+.feature {
+  margin-top: 120px;
+  background: #f5fafe;
+  padding: 110px 0;
+}
+
+.feature .sub-title {
+  color: #000339;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 3.5rem; /* 100% */
+}
+
+.feature .desc {
+  margin-top: 15px;
+  color: #5a6473;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 3rem; /* 187.5% */
+}
+
+.feature .link {
+  display: flex;
+  align-items: center;
+  color: #0689ff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.feature .link .arrow {
+  margin-left: 8px;
+}
+
+.feature .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature .list {
+  margin-top: 70px;
+  display: flex;
+  gap: 30px;
+}
+.feature .item {
+  flex: 1;
+  border-radius: 12px;
+}
+.feature .item .thumb {
+  width: 100%;
+  height: 227px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.feature .item .body {
+  padding: 17px 20px 24px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.feature .item .title {
+  color: #000339;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2rem; /* 100% */
+}
+
+.feature .item .desc {
+  color: #a3a6ab;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.feature .item .info {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.feature .item .info .label {
+  color: #4d4d52;
+  margin-left: 8px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.4rem; /* 100% */
+  letter-spacing: 0.014rem;
+}
+
+.feature .item .info .icon {
+  margin-left: 23px;
+}
+
+.feature .item .info .icon:first-child {
+  margin-left: 0;
 }
