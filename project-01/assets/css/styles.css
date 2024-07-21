@@ -46,6 +46,7 @@ a {
 
 /* Header */
 .header {
+  position: relative;
   background: #e6f0ff;
   height: 100vh;
 }
@@ -54,7 +55,7 @@ a {
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 38px;
 }
 
 .navbar ul {
@@ -88,4 +89,49 @@ a {
 .navbar .action-btn {
   padding: 13px 16px;
   margin-left: 18px;
+}
+
+/* Hero */
+.hero {
+  margin-top: 130px;
+}
+
+.hero .info {
+  width: 51%;
+}
+
+.hero .sub-title {
+  color: #687690;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.hero .title {
+  margin-top: 8px;
+  color: #000336;
+  font-size: 6.2rem;
+  font-weight: 700;
+  line-height: 118.75%;
+}
+
+.hero .desc {
+  margin-top: 30px;
+  color: #5a6473;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 3.2rem; /* 177.778% */
+}
+
+.hero-cta {
+  margin-top: 40px;
+  min-width: 170px;
+}
+
+.hero-img {
+  position: absolute;
+  bottom: 0;
+  right: calc((100vw - 1110px) / 2 - 100px);
 }
