@@ -16,6 +16,19 @@ body {
 }
 
 /* Common */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  overflow: hidden;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .content {
   width: 1110px;
   max-width: calc(100% - 48px);
@@ -139,7 +152,8 @@ a {
 
 /* ================================ Clients ============================ */
 .clients {
-  margin-top: 122px;
+  margin-top: 79px;
+  padding: 43px 0;
 }
 
 .clients .row {
@@ -168,7 +182,8 @@ a {
 
 /* ================================ Guides ============================ */
 .guides {
-  margin-top: 200px;
+  margin-top: 40px;
+  padding: 93px 0 79px;
 }
 
 .guides .sub-title {
@@ -248,7 +263,7 @@ a {
 
 /* ================================ Features ============================ */
 .feature {
-  margin-top: 120px;
+  margin-top: 41px;
   background: #f5fafe;
   padding: 110px 0;
 }
@@ -308,11 +323,11 @@ a {
   border-radius: 12px;
 }
 
-.feature .item .title {
+.feature .item .title a {
   color: #000339;
   font-size: 2rem;
   font-weight: 600;
-  line-height: 2rem; /* 100% */
+  line-height: 1.5;
 }
 
 .feature .item .desc {
@@ -320,6 +335,7 @@ a {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.5;
+  word-break: break-all;
 }
 
 .feature .item .info {
