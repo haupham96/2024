@@ -621,14 +621,22 @@ a {
 
 .footer .social {
   display: flex;
+  gap: 16px;
   margin-top: 40px;
 }
 
 .footer .social-link {
   display: flex;
   justify-content: center;
-  width: 117px;
+  align-items: center;
+  width: 28px;
   height: 28px;
+  border-radius: 3px;
+  background: #f9f9f9;
+}
+
+.footer .social-link:hover {
+  background: #ebebeb;
 }
 
 .footer .row-bottom {
