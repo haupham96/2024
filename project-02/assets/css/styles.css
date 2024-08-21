@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #fffcf4;
+}
+
+/* =================================== COMMON ================================== */
+.main-content {
+    width: 1170px;
+    margin: 0 auto;
+    max-width: calc(100% - 48px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0 16px;
+    min-width: 118px;
+    color: #FFF;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 50px;
+    border-radius: 24.5px;
+    background: #171100;
+}
+
+/* =================================== HEADER ================================== */
+.header {
+    width: 100%;
+    background: var(--bg-color);
+}
+
+.header .body {
+    display: flex;
+    align-items: center;
+    padding: 36px 0 8px;
+}
+
+.header.fixed {
+    position: sticky;
+    top: -28px;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav a {
+    padding: 8px 21px;
+    color: #5f5b53;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.8rem; /* 175% */
+}
+
+.nav li a {
+    position: relative;
+}
+
+.nav li.active a,
+.nav a:hover {
+    /* font-weight: 600;  -> dày lên sẽ làm đẩy các element ra */
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
+}
+
+.nav li.active a::after {
+    position: absolute;
+    bottom: 5px;
+    left: 21px;
+    display: block;
+    content: '';
+    background-color: #171100;
+    height: 2px;
+    width: 12px;
+    border-radius: 1px;
+}
+
+.header .sign-up-btn {
+    min-width: 144px;
+}
+
+.header .action {
+    margin-left: 49px;
+}
