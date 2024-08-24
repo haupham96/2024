@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>Stocktake App</title>
+        <item>
+            <title>Version 1.0.2</title>
+            <description>New release.</description>
+            <pubDate>Sat, 24 August 2024 12:12:12</pubDate>
+            <enclosure url="http://10.64.0.45/Stocktake/Stocktake_v1.0.2.apk" sparkle:version="1.0.2" sparkle:os="android" />
+        </item>
+    </channel>
+</rss>
