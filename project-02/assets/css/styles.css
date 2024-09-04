@@ -592,12 +592,16 @@ a {
     margin-top: 55px;
     display: flex;
     gap: 0 30px;
+    overflow: hidden;
 }
 
 .blog-list .item {
-    width: calc(100% / 3);
+    width: calc(100% / 3 - 20px);
+    flex-shrink: 0;
     border-radius: 16px;
     background: #FFF;
+    transition: all ease 0.3s;
+    transform: translateX(-100%);
 }
 
 .blog-list .item:hover {
