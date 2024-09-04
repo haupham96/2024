@@ -429,9 +429,20 @@ a {
     padding: 96px 0;
 }
 
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
 .feedback-item {
     display: flex;
     justify-content: space-between;
+    flex-shrink: 0;
+    width: 100%;
+
+    /* Thêm hiệu ứng để trượt sang item thứ 2 */
+    transform: translateX(-100%); /* F12 trên chrome bật tắt thuộc tính này sẽ thấy nó trượt */
+    transition: all ease 0.3s;
 }
 
 .feedback-item .avatar {
