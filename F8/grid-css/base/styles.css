@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 50px;
+    /* những gird-rows mà ko nằm trong grid-template-rows sẽ ăn theo thằng này. */
+    /*grid-auto-rows: 100px; -> fix cố định giá trị là 100px cho row */
+    /* grid-auto-rows: minmax(40px, auto);  -> set dynamic cho row với min là 40px; max là auto theo content */
+    grid-template-areas:
+        "header header header header header"
+        "menu main main right right"
+        "menu footer footer footer footer";
+}
+
+.item {
+    background: tomato;
+    border: 1px solid #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+.item-xx {
+    /* grid-column-start: 2;
+       grid-column-end: 4; */
+    grid-column: 2 / -2; /* cách viết tắt start / end */
+    /* giá trị bắt đầu là 1, giá trị kết thúc của grid là -1 (cell cuối cùng) */
+
+    /* grid-row-start: 4;
+       grid-row-end: 6; */
+    grid-row: 4 / 6; /* cách viết tắt */
+}
+
+.item-1 {
+    grid-area: header;
+}
+
+.item-2 {
+    grid-area: menu;
+}
+
+.item-3 {
+    grid-area: main;
+}
+
+.item-4 {
+    grid-area: right;
+}
+
+.item-5 {
+    grid-area: footer;
+}
