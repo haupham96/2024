@@ -47,6 +47,22 @@ a {
     cursor: pointer;
 }
 
+.section-heading {
+    color: #10375C;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 6rem; /* 120% */
+    letter-spacing: -0.1rem;
+}
+
+.section-desc {
+    color: #575F66;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 3rem; /* 166.667% */
+}
+
 /* ====================================== [ HEADER ] ====================================== */
 .header {
     min-height: 100vh;
@@ -223,4 +239,90 @@ a {
 .hero__img:last-child {
     width: 210px;
     height: 410px;
+}
+
+/* ====================================== [ HEADER ] ====================================== */
+.service {
+    padding: 170px 0;
+}
+
+.service__heading,
+.service__desc {
+    text-align: center;
+}
+
+.service__desc {
+    width: 468px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service__row {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service__img {
+    width: 570px;
+    height: 570px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.service-item {
+    width: 470px;
+    border-radius: 10px;
+    background: #FFF;
+    padding: 22px;
+    display: flex;
+    align-items: flex-start;
+    transition: 0.25s;
+}
+
+.service-item:hover {
+    /* các item dính sát vào nhau nên sẽ che đi các box-shadow cạnh dưới, thêm relative để nó đc định vị và hiển thị lên trên */
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.05);
+}
+
+.service-item:hover .service-item__icon {
+    background: #2E80CE;
+    color: #FFFFFF;
+}
+
+.service-item__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #EFF6FD;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    color: #10375C;
+    transition: 0.25s;
+}
+
+.service-item__body {
+    margin-left: 20px;
+}
+
+.service-item__heading {
+    color: #10375C;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.service-item__desc {
+    margin-top: 8px;
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.8rem; /* 175% */
+}
+
+.service__btn {
+    margin-top: 55px;
 }
