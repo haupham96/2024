@@ -460,7 +460,7 @@ a {
     transition: 0.25s;
 }
 
-.member-item:hover .member-item__img{
+.member-item:hover .member-item__img {
     transform: scale(1.1);
 }
 
@@ -511,4 +511,58 @@ a {
 
 .control-next-icon {
     rotate: 180deg;
+}
+
+/* ====================================== [ Install App ] ====================================== */
+.install {
+    margin-top: 180px;
+}
+
+.install__inner {
+    border-radius: 4px;
+    background: #2E80CE;
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.install__img {
+    margin-top: -95px;
+    width: 284px;
+    height: 522px;
+    display: block;
+    object-fit: cover;
+}
+
+.install__content {
+    max-width: 586px;
+}
+
+.install__heading {
+    max-width: 489px;
+    color: #FFF;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 6rem; /* 120% */
+    letter-spacing: -0.1rem;
+}
+
+.install__desc {
+    max-width: 586px;
+    margin-top: 18px;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 3rem; /* 166.667% */
+}
+
+.install__row {
+    display: flex;
+    column-gap: 28px;
+    margin-top: 38px;
+}
+
+.install__btn-img {
+    object-fit: cover;
 }
