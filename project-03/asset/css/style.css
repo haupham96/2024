@@ -661,3 +661,43 @@ a {
     font-weight: 500;
 }
 
+/* ====================================== [ Appointment ] ====================================== */
+.appointment {
+    margin: 85px 0 170px;
+}
+
+.appointment__inner {
+    text-align: center;
+    background: #F6FBFF;
+    padding: 100px 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.appointment__heading {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.appointment__heading::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    content: "";
+    width: 136px;
+    height: 2px;
+    background: #2E80CE;
+}
+
+.appointment__desc {
+    margin-top: 18px;
+    margin-bottom: 38px;
+    max-width: 617px;
+    font-size: 1.6rem;
+}
