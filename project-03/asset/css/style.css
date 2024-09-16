@@ -26,6 +26,11 @@ a {
     text-decoration: none;
 }
 
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 .btn {
     --height: 60px;
     display: inline-block;
@@ -101,6 +106,7 @@ a {
 }
 
 .logo {
+    font-family: "Sora", sans-serif;
     font-size: 1rem;
     position: relative;
     display: inline-flex;
@@ -701,3 +707,129 @@ a {
     max-width: 617px;
     font-size: 1.6rem;
 }
+
+/* ====================================== [ footer ] ====================================== */
+.footer {
+    background: #10375C;
+    padding: 100px 0 42px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.footer__row {
+    display: grid;
+    column-gap: 78px;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+}
+
+.footer__column {
+
+}
+
+.footer__heading {
+    margin-bottom: 20px;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.8rem; /* 175% */
+}
+
+.footer__column-desc {
+    margin-top: 18px;
+    max-width: 336px;
+    color: #A9B3BB;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.8rem; /* 175% */
+}
+
+.footer__list {
+    margin-bottom: 28px;
+}
+
+.footer__item {
+    margin-bottom: 10px;
+}
+
+.footer__link {
+    white-space: nowrap;
+    display: inline-block;
+    color: #A9B3BB;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem; /* 185.714% */
+}
+
+.footer__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer__social {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 28px;
+}
+
+.footer__social-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background: #FFFFFF;
+    color: #2E80CE;
+    transition: 0.25s;
+}
+
+.footer__social-btn:hover {
+    color: #FFFFFF;
+    background: #2E80CE;
+}
+
+.footer-form {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.footer-form__input {
+    width: 212px;
+    height: 46px;
+    outline: none;
+    font-size: 1.4rem;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #406181;
+    background: transparent;
+    padding: 0 10px;
+}
+
+.footer-form__input::placeholder {
+    color: #9CA8B1;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem; /* 185.714% */
+}
+
+.footer-form__submit {
+    --height: 46px;
+
+    min-width: 108px;
+    border-radius: 4px;
+}
+
+.footer__copyright {
+    border-top: 1px solid #406181;
+    padding-top: 28px;
+}
+
+.footer__copyright-desc {
+    color: #AAB3BA;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.6rem; /* 185.714% */
+}
+
