@@ -49,7 +49,6 @@ a {
 
 .section-heading {
     color: #10375C;
-    text-align: center;
     font-size: 5rem;
     font-weight: 600;
     line-height: 6rem; /* 120% */
@@ -325,4 +324,57 @@ a {
 
 .service__btn {
     margin-top: 55px;
+}
+
+/* ====================================== [ HEADER ] ====================================== */
+.work {
+    background: #F6FBFF;
+    padding: 100px 0;
+}
+
+.work__desc {
+    width: 468px;
+}
+
+.work__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    margin-top: 70px;
+}
+
+.work-item {
+    padding: 44px;
+    border: 16px solid #EAF6FF;
+    border-radius: 4px;
+    transition: 0.25s;
+}
+
+.work-item:hover {
+    transform: translateY(-16px);
+    border-color: #2E80CE;
+}
+
+.work-item__heading {
+    margin-top: 18px;
+    color: #10375C;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 3.6rem; /* 138.462% */
+}
+
+.work-item__desc,
+.work-item__more {
+    color: #575F66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.8rem; /* 175% */
+}
+
+.work-item__more {
+    color: #2E80CE;
+}
+
+.work-item__desc {
+    margin: 28px 0 18px;
 }
