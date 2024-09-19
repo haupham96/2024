@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      html {
+          font-family: system-ui;
+      }
+
+      table {
+          width: 80%;
+          margin: 50px;
+          border: 1px solid #ccc;
+          border-collapse: collapse;
+      }
+
+      td {
+          border-top: 1px solid #ccc;
+          padding: 10px;
+          text-align: center;
+      }
+
+      .w50 {
+          width: 50%;
+      }
+      
+      table tr:nth-child(even) {
+          background: #ccc;
+      }
+
+      table tr:nth-child(even):hover {
+          background: #fff;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr class="t-head">
+        <td>Name</td>
+        <td class="w50">DOB</td>
+        <td>Sex</td>
+      </tr>
+      <tr>
+        <td>Marco</td>
+        <td>15/05/1996</td>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <td>Marco</td>
+        <td>15/05/1996</td>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <td>Marco</td>
+        <td>15/05/1996</td>
+        <td>Male</td>
+      </tr>
+    </table>
+  </body>
+</html>
