@@ -1,0 +1,55 @@
+/* select input is invalid and not show place holder */
+.form-input:has(:invalid:not(:placeholder-shown)) {
+    display: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.switch label {
+    display: inline-block;
+    outline: 2px solid #d1d3d4;
+    background: #d1d3d4;
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+    transition: ease 0.3s;
+}
+
+.switch label::before,
+.switch label::after {
+    content: "";
+    display: inline-block;
+}
+
+.switch label::before {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    transition: ease 0.3s;
+}
+
+.switch [type="checkbox"]:checked + label::before {
+    transform: translateX(100%);
+}
+
+.switch [type="checkbox"]:checked + label {
+    background: #38cf5b;
+    outline-color: #38cf5b;
+}
+
+.avatar-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
