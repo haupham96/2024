@@ -160,11 +160,12 @@ main {
     flex-direction: column;
 }
 
-.form-group:focus-within .form-label {
+.form-group:focus-within .form-label:not(.large) {
     color: #5f42b6;
 }
 
-.form-group:focus-within .form-input {
+.form-group:focus-within .form-input,
+.form-group:focus-within .form-textarea {
     border-bottom-color: #5f42b6;
 }
 
@@ -174,19 +175,106 @@ main {
     font-size: 1.1rem;
 }
 
-.form-input {
+.form-label.large {
+    font-size: 1.3rem;
+}
+
+.form-input,
+.form-textarea {
     width: 100%;
     outline: none;
     border: none;
     border-bottom: 2px solid #e3e3e9;
     padding: 8px 0 11px 0;
     color: #0d0d3b;
+    caret-color: #5f42b6;
 }
 
-.form-input::placeholder {
+.form-input::placeholder,
+.form-textarea::placeholder {
     color: #bebfc9;
 }
 
 .form-error {
     display: none;
+}
+
+.radio-btn {
+    display: inline-block;
+}
+
+.radio-btn + .radio-btn {
+    margin-left: 16px;
+}
+
+.radio-btn label {
+    position: relative;
+    white-space: nowrap;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.radio-btn label::before,
+.radio-btn label::after {
+    content: '';
+    display: inline-block;
+}
+
+.radio-btn label::before {
+    margin-right: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #a7a7b6;
+}
+
+.radio-btn input[type="radio"] {
+    display: none;
+}
+
+.radio-btn [type="radio"]:checked + label::before {
+    border-color: #3e2093;
+    background: #3e2093;
+}
+
+.radio-btn label::after {
+    position: absolute;
+    top: 5px;
+    left: 3.5px;;
+    width: 6px;
+    height: 3px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    rotate: -45deg;
+}
+
+.radio-group {
+    margin-top: 20px;
+    display: flex;
+}
+
+.form-textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+.btn {
+    display: block;
+    min-width: 160px;
+    height: 60px;
+    color: #fff;
+    outline: none;
+    background: #3e2093;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-left: auto;
+    transition: ease 0.2s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
 }
