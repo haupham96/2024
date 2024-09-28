@@ -277,6 +277,7 @@ main {
 }
 
 .btn {
+    -webkit-tap-highlight-color: transparent; /* remove default highlight behavior in mobile  */
     display: block;
     min-width: 160px;
     height: 60px;
