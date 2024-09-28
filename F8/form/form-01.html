@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0"/>
     <title>Demo form</title>
     <!-- Font awesome -->
     <link
@@ -15,7 +17,8 @@
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./form-01.css"/>
+    <link rel="stylesheet"
+          href="./form-01.css"/>
 </head>
 <body>
 <main>
@@ -52,16 +55,20 @@
             </div>
 
             <div class="socials">
-                <a href="#!" class="item">
+                <a href="#!"
+                   class="item">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
-                <a href="#!" class="item">
+                <a href="#!"
+                   class="item">
                     <i class="fa-brands fa-twitter"></i>
                 </a>
-                <a href="#!" class="item">
+                <a href="#!"
+                   class="item">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="#!" class="item">
+                <a href="#!"
+                   class="item">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
             </div>
@@ -72,76 +79,130 @@
 
         <!-- Contact form -->
         <div class="contact-form">
-            <form action="" autocomplete="off">
+            <form action="https://api-gateway.fullstack.edu.vn/action_page.php"
+                  method="POST"
+                  autocomplete="off">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="first-name" class="form-label">First Name</label>
-                        <input class="form-input" type="text" id="first-name" name="first-name" placeholder="Marco">
+                        <label for="first-name"
+                               class="form-label">First Name</label>
+                        <input class="form-input"
+                               type="text"
+                               id="first-name"
+                               name="first-name"
+                               required
+                               minlength="2"
+                               placeholder="Marco">
                         <p class="form-error">Please input first name</p>
                     </div>
 
                     <div class="form-group">
-                        <label for="last-name" class="form-label">Last Name</label>
-                        <input class="form-input" type="text" id="last-name" name="last-name" placeholder="Pham">
+                        <label for="last-name"
+                               class="form-label">Last Name</label>
+                        <input class="form-input"
+                               type="text"
+                               id="last-name"
+                               name="last-name"
+                               required
+                               minlength="2"
+                               placeholder="Pham">
                         <p class="form-error">Please input last name</p>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="mail" class="form-label">Mail</label>
-                        <input class="form-input" type="email" id="mail" name="mail" placeholder="abc@gmail.com"
-                               value="hello@gmail.com">
+                        <label for="mail"
+                               class="form-label">Mail</label>
+                        <input class="form-input"
+                               type="email"
+                               id="mail"
+                               name="mail"
+                               placeholder="abc@gmail.com"
+                               required
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        >
                         <p class="form-error">Please input e-mail</p>
                     </div>
                     <div class="form-group">
-                        <label for="phone" class="form-label">Phone</label>
-                        <input class="form-input" type="tel" id="phone" name="phone" placeholder="0909990132">
+                        <label for="phone"
+                               class="form-label">Phone</label>
+                        <input class="form-input"
+                               type="tel"
+                               id="phone"
+                               name="phone"
+                               required
+                               pattern="^(0|\+?84)(3|5|7|8|9)[0-9]{8}$"
+                               placeholder="0909990132">
                         <p class="form-error">Please input your phone</p>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="" class="form-label large">
+                        <label for=""
+                               class="form-label large">
                             What the of website do need?
                         </label>
                         <div class="radio-group">
                             <div class="radio-btn">
-                                <input type="radio" name="type" id="web-design">
+                                <input type="radio"
+                                       name="type"
+                                       required
+                                       value="1"
+                                       checked
+                                       id="web-design">
                                 <label for="web-design">Web Design</label>
                             </div>
                             <div class="radio-btn">
-                                <input type="radio" name="type" id="web-development">
+                                <input type="radio"
+                                       name="type"
+                                       required
+                                       value="2"
+                                       id="web-development">
                                 <label for="web-development">Web Development</label>
                             </div>
                             <div class="radio-btn">
-                                <input type="radio" name="type" id="logo-design">
+                                <input type="radio"
+                                       name="type"
+                                       required
+                                       value="3"
+                                       id="logo-design">
                                 <label for="logo-design">Logo Design</label>
                             </div>
                             <div class="radio-btn">
-                                <input type="radio" name="type" id="others">
+                                <input type="radio"
+                                       name="type"
+                                       required
+                                       value="4"
+                                       id="others">
                                 <label for="others">Others</label>
                             </div>
                         </div>
-
+                        <p class="form-error">Please choose type</p>
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="message" class="form-label">Message</label>
+                        <label for="message"
+                               class="form-label">Message</label>
                         <textarea id="message"
                                   class="form-textarea"
                                   placeholder="Write your message ..."
                                   name="message"
+                                  required
+                                  minlength="2"
                                   oninput="onResize(this)"
                         ></textarea>
+                        <p class="form-error">Please input message</p>
                     </div>
                 </div>
 
                 <div class="form-row">
-                    <button class="btn" type="submit">Send Message</button>
+                    <button class="btn btn-submit"
+                            type="submit">Send Message
+                    </button>
                 </div>
             </form>
         </div>

@@ -148,16 +148,30 @@ main {
     flex-grow: 1;
 }
 
+.contact-form:has(:invalid) .btn-submit {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
 .form-row {
     margin-bottom: 30px;
     display: flex;
     gap: 32px
 }
 
+.form-row:last-child {
+    margin-bottom: 0;
+}
+
 .form-group {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+}
+
+/* form-group inside has invalid field and not show place-holder -> effect .form-error */
+.form-group:has(:invalid:not(:placeholder-shown)) .form-error {
+    display: block;
 }
 
 .form-group:focus-within .form-label:not(.large) {
@@ -197,6 +211,9 @@ main {
 
 .form-error {
     display: none;
+    color: red;
+    font-size: 1.3rem;
+    margin-top: 4px;
 }
 
 .radio-btn {
