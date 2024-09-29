@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .mask {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            font-size: 30px;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .box::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            translate: -50% -50%;
+            margin: auto auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            /*background: tomato;*/
+            border-radius: 50%;
+            border: 5px solid #007bff;
+            border-top: none;
+            border-bottom: none;
+
+            animation-name: spinner;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: normal;
+            animation-fill-mode: forwards; /* Nơi dừng lại khi kết thúc animation / forward: điểm cuối của animation. */
+        }
+
+        /* from ~ to can be replace with % (0% ~ 100%) */
+        @keyframes spinner {
+            from {
+                rotate: 0;
+            }
+            to {
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="mask">
+    <div class="box">
+        Loading...
+    </div>
+</div>
+
+<a href="#!">Click me!</a>
+</body>
+</html>

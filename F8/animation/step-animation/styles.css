@@ -1,0 +1,46 @@
+.sticker {
+    width: 288px;
+    height: 288px;
+    /* https://miro.medium.com/v2/resize:fit:1400/1*UZ7PidVY0RnVfXkPTACvQg.png */
+    background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*UZ7PidVY0RnVfXkPTACvQg.png");
+    animation: run 1s infinite steps(1);
+}
+
+@keyframes run {
+
+    0% {
+        background-position: -0px -0px;
+    }
+
+    12.5% {
+        background-position: -288px -0px;
+    }
+
+    25% {
+        background-position: -576px -0px;
+    }
+
+    37.5% {
+        background-position: -0px -288px;
+    }
+
+    50% {
+        background-position: -288px -288px;
+    }
+
+    62.5% {
+        background-position: -576px -288px;
+    }
+
+    75% {
+        background-position: -0px -576px;
+    }
+
+    87.5% {
+        background-position: -288px -576px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
