@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .btn {
+            /* #2af598 */
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            background: #2b86c5;
+            border-radius: 20px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        .btn::before {
+            position: absolute;
+            content: "";
+            width: 0;
+            background: #2af598;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            transition: .25s;
+        }
+
+        .btn:hover::before {
+            left: 0;
+            width: 100%;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<button class="btn">
+    <span>Hover me</span>
+</button>
+</body>
+</html>

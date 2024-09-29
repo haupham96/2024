@@ -1,0 +1,23 @@
+.text {
+    display: inline-block;
+    position: relative;
+}
+
+.text::before {
+    display: inline-flex;
+    justify-content: flex-end;
+    position: absolute;
+    content: attr(data-text);
+    color: orange;
+    width: 0;
+    right: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: .5s;
+}
+
+.text:hover::before {
+    width: 100%;
+    left: 0;
+    justify-content: flex-start;
+}

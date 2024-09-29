@@ -1,0 +1,49 @@
+input {
+    outline: none;
+}
+input,label {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    transition: all ease 0.3s;
+    pointer-events: none;
+}
+
+.form-input {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color .25s;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+}
+
+.form-input:not(:placeholder-shown) ~ .form-label,
+.form-input:focus ~ .form-label {
+    /*  */
+    text-shadow: -0.1px -0.1px 0 #007bff, 0.1px 0.1px 0 #007bff;
+    transform: translateY(-31px);
+    left: 7px;
+    color: #007bff;
+    background: #fff;
+    padding: 0 5px;
+}
+
+.form-input:not(:focus) ~ .form-label {
+    color: #666;
+    text-shadow: none;
+}
