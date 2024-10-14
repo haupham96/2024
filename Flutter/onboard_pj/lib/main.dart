@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:onboard_pj/pages/intro/Intro.dart';
+import 'package:onboard_pj/pages/onboarding/onboarding_page_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
-      home: const Intro(),
+      home: const OnboardingPageView(),
     );
   }
 }
