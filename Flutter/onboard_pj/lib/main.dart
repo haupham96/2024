@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:onboard_pj/pages/onboarding/onboarding_page_view.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:onboard_pj/pages/main/main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+          fontFamily: GoogleFonts.roboto().fontFamily,
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
-      home: const OnboardingPageView(),
+      home: const MainPage(),
     );
   }
 }

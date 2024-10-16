@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:onboard_pj/pages/onboarding/onboarding_child_page.dart';
 import 'package:onboard_pj/utils/enums/onboarding_page_position.dart';
