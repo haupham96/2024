@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:onboard_pj/pages/onboarding/onboarding_page_view.dart';
+import 'package:onboard_pj/pages/intro/Intro.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           fontFamily: GoogleFonts.roboto().fontFamily,
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)),
-      home: const OnboardingPageView(),
+      home: const Intro(),
     );
   }
 }

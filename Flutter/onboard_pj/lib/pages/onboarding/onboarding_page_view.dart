@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:onboard_pj/pages/onboarding/onboarding_child_page.dart';
 import 'package:onboard_pj/pages/welcome/welcome_page.dart';
 import 'package:onboard_pj/utils/enums/onboarding_page_position.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingPageView extends StatefulWidget {
   const OnboardingPageView({super.key});
@@ -30,7 +31,10 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
                 _pageController.jumpToPage(1);
               },
               backOnPressed: () {},
-              skipOnPressed: _gotoWelcomePage,
+              skipOnPressed: () {
+                completeOnboarding();
+                _gotoWelcomePage();
+              },
             ),
             OnboardingChildPage(
               key: widget.key,
@@ -41,7 +45,10 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
               backOnPressed: () {
                 _pageController.jumpToPage(0);
               },
-              skipOnPressed: _gotoWelcomePage,
+              skipOnPressed: () {
+                completeOnboarding();
+                _gotoWelcomePage();
+              },
             ),
             OnboardingChildPage(
               key: widget.key,
@@ -50,15 +57,31 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
               backOnPressed: () {
                 _pageController.jumpToPage(1);
               },
-              skipOnPressed: _gotoWelcomePage,
+              skipOnPressed: () {
+                completeOnboarding();
+                _gotoWelcomePage();
+              },
             )
           ],
         ),
       ),
     );
   }
-  
-  void _gotoWelcomePage() {
-    Navigator.push(context, MaterialPageRoute(builder: (builder) => const WelcomePage()));
+
+  void _gotoWelcomePage() async {
+    completeOnboarding();
+    if (context.mounted) {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (builder) => const WelcomePage()));
+    }
+  }
+
+  Future<void> completeOnboarding() async {
+    try {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      prefs.setBool("isOnboardingCompleted", true);
+    } catch (e) {
+      print(e);
+    }
   }
 }

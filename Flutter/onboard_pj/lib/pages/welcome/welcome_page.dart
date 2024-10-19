@@ -13,7 +13,9 @@ class WelcomePage extends StatelessWidget {
             icon:
                 const Icon(Icons.arrow_back_ios_new_outlined, size: 18, color: Colors.white),
             onPressed: () {
-              Navigator.pop(context);
+              if(Navigator.canPop(context)) {
+                Navigator.pop(context);
+              }
             },
           ),
         ),
