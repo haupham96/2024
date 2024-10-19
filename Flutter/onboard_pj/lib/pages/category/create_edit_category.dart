@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_iconpicker/flutter_iconpicker.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CreateEditCategory extends StatefulWidget {
@@ -14,6 +15,7 @@ class _CreateEditCategoryState extends State<CreateEditCategory> {
 
   final List<Color> _colors = [];
   int selectedIndex = 0;
+  IconData? _icon;
 
   @override
   void initState() {
@@ -100,18 +102,24 @@ class _CreateEditCategoryState extends State<CreateEditCategory> {
         children: [
           _buildTitleField("Category icon :"),
           GestureDetector(
-            onTap: () {},
+            onTap: _chooseIcon,
             child: Container(
               margin: const EdgeInsets.only(top: 10),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
                   color: Colors.white.withOpacity(.21)),
-              child: Text(
-                "Choose icon from library",
-                style: TextStyle(
-                    fontSize: 12, color: Colors.white.withOpacity(0.87)),
-              ),
+              child: _icon != null
+                  ? Icon(
+                      _icon,
+                      size: 20,
+                      color: _colors.elementAt(selectedIndex),
+                    )
+                  : Text(
+                      "Choose icon from library",
+                      style: TextStyle(
+                          fontSize: 12, color: Colors.white.withOpacity(0.87)),
+                    ),
             ),
           )
         ],
@@ -204,9 +212,20 @@ class _CreateEditCategoryState extends State<CreateEditCategory> {
       ),
     );
   }
-  
+
   void _handleCreateCategory() {
     var categoryName = _nameTextController.text;
-    
+  }
+
+  void _chooseIcon() async {
+    IconData? iconData = await FlutterIconPicker.showIconPicker(
+      context,
+      iconPackModes: [IconPack.material],
+    );
+    if (iconData != null) {
+      setState(() {
+        _icon = iconData;
+      });
+    }
   }
 }
