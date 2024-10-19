@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/basic_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/basic_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/basic_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/sneaker_shop/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/sneaker_shop/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/sneaker_shop/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/todo_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/todo_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/MitchKoko/todo_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/Tincoder/hello_app/flutter_application/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/Tincoder/hello_app/flutter_application/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/Tincoder/hello_app/flutter_application/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/onboard_pj/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/onboard_pj/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/onboard_pj/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/test_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/test_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Flutter/test_app/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
