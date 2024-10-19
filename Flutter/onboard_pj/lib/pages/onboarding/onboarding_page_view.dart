@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:onboard_pj/pages/onboarding/onboarding_child_page.dart';
+import 'package:onboard_pj/pages/welcome/welcome_page.dart';
 import 'package:onboard_pj/utils/enums/onboarding_page_position.dart';
 
 class OnboardingPageView extends StatefulWidget {
@@ -29,7 +30,7 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
                 _pageController.jumpToPage(1);
               },
               backOnPressed: () {},
-              skipOnPressed: () {},
+              skipOnPressed: _gotoWelcomePage,
             ),
             OnboardingChildPage(
               key: widget.key,
@@ -40,22 +41,24 @@ class _OnboardingPageViewState extends State<OnboardingPageView> {
               backOnPressed: () {
                 _pageController.jumpToPage(0);
               },
-              skipOnPressed: () {},
+              skipOnPressed: _gotoWelcomePage,
             ),
             OnboardingChildPage(
               key: widget.key,
               onboardingPagePosition: OnboardingPagePosition.page3,
-              nextOnPressed: () {
-                // _pageController.offset;
-              },
+              nextOnPressed: _gotoWelcomePage,
               backOnPressed: () {
                 _pageController.jumpToPage(1);
               },
-              skipOnPressed: () {},
+              skipOnPressed: _gotoWelcomePage,
             )
           ],
         ),
       ),
     );
+  }
+  
+  void _gotoWelcomePage() {
+    Navigator.push(context, MaterialPageRoute(builder: (builder) => const WelcomePage()));
   }
 }
