@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "763198706122",
+    "project_id": "social-media-1518d",
+    "storage_bucket": "social-media-1518d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763198706122:android:b6437e24ceccfa36e7ff33",
+        "android_client_info": {
+          "package_name": "com.example.social_media"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtB0b42auzUk_OFLNiFIpRcvduNhlWNpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763198706122:android:cd19f44ca04afd40e7ff33",
+        "android_client_info": {
+          "package_name": "com.marco.so"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtB0b42auzUk_OFLNiFIpRcvduNhlWNpA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
