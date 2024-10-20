@@ -39,3 +39,10 @@ samples, guidance on mobile development, and a full API reference.
 `What went wrong: Execution failed for task ':app:checkDebugDuplicateClasses'. > A failure occurred while executing com.android.build.gradle.internal.tasks.CheckDuplicatesRunnable`
 ![img.png](img.png)
 upgrade org.jetbrains.kotlin.android to 1.8.0 in setting.gradle
+
+8. add firebase_auth to pubspec
+`flutter pub add firebase_auth`
+
+======================= FIRE_STORE GUIDE ============================
+1. add dependency
+`flutter pub add cloud_firestore`
