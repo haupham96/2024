@@ -15,6 +15,7 @@ class AuthCubit extends Cubit<AuthState> {
     AppUser? curUser = await authRepo.getCurrentUser();
     if (curUser != null) {
       emit(Authenticated(curUser));
+      _currentUser = curUser;
     } else {
       emit(Unauthenticated());
     }
@@ -29,6 +30,7 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthLoading());
       AppUser? appUser = await authRepo.loginWithEmailPassword(email, password);
       if (appUser != null) {
+        _currentUser = appUser;
         emit(Authenticated(appUser));
       } else {
         emit(Unauthenticated());
@@ -47,6 +49,7 @@ class AuthCubit extends Cubit<AuthState> {
       AppUser? appUser =
           await authRepo.registerWithEmailPassword(name, email, password);
       if (appUser != null) {
+        _currentUser = appUser;
         emit(Authenticated(appUser));
       } else {
         emit(Unauthenticated());
@@ -59,6 +62,7 @@ class AuthCubit extends Cubit<AuthState> {
 
   // logout
   Future<void> logout() async {
+    _currentUser = null;
     authRepo.logout();
     emit(Unauthenticated());
   }

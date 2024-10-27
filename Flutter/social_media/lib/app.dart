@@ -6,7 +6,7 @@ import 'package:social_media/features/auth/presentation/cubits/auth_state.dart';
 import 'package:social_media/themes/light_mode.dart';
 
 import 'features/auth/presentation/pages/auth_page.dart';
-import 'features/post/presentation/pages/home_page.dart';
+import 'features/home/presentation/pages/home_page.dart';
 
 /*
   ROOT Level of app
@@ -39,7 +39,6 @@ class MyApp extends StatelessWidget {
         theme: lightMode,
         home: BlocConsumer<AuthCubit, AuthState>(
           builder: (context, authState) {
-            print(authState);
             if (authState is Unauthenticated) {
               return const AuthPage();
             } else if (authState is Authenticated) {

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:social_media/features/post/presentation/components/my_drawer_title.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:social_media/features/home/presentation/components/my_drawer_title.dart';
+
+import '../../../auth/presentation/cubits/auth_cubit.dart';
+import '../../../profile/presentation/pages/profile_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -33,7 +37,13 @@ class MyDrawer extends StatelessWidget {
                   }),
               // profile tile
               MyDrawerTitle(
-                  title: "P R O F I L E", icon: Icons.person, onTap: () {}),
+                  title: "P R O F I L E",
+                  icon: Icons.person,
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const ProfilePage()));
+                  }),
               // search tile
               MyDrawerTitle(
                   title: "S E A R C H", icon: Icons.search, onTap: () {}),
@@ -43,7 +53,12 @@ class MyDrawer extends StatelessWidget {
               // logout tile
               const Spacer(),
               MyDrawerTitle(
-                  title: "L O G O U T", icon: Icons.logout, onTap: () {}),
+                  title: "L O G O U T",
+                  icon: Icons.logout,
+                  onTap: () {
+                    final authCubit = context.read<AuthCubit>();
+                    authCubit.logout();
+                  }),
             ],
           ),
         ),
