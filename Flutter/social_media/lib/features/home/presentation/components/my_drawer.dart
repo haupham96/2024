@@ -40,9 +40,14 @@ class MyDrawer extends StatelessWidget {
                   title: "P R O F I L E",
                   icon: Icons.person,
                   onTap: () {
+                    // pop menu drawer
                     Navigator.pop(context);
+                    
+                    final user = context.read<AuthCubit>().currentUser;
+                    
+                    // navigate to profile page.
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const ProfilePage()));
+                        MaterialPageRoute(builder: (context) => ProfilePage(uid: user!.uid)));
                   }),
               // search tile
               MyDrawerTitle(
