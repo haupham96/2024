@@ -3,9 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:social_media/features/auth/data/firebase_auth_repo.dart';
 import 'package:social_media/features/auth/presentation/cubits/auth_cubit.dart';
 import 'package:social_media/features/auth/presentation/cubits/auth_state.dart';
+import 'package:social_media/features/post/data/firebase_post_repo.dart';
+import 'package:social_media/features/post/presentation/cubits/post_cubit.dart';
 import 'package:social_media/features/profile/data/firebase_profile_repo.dart';
 import 'package:social_media/features/profile/presentation/cubits/profile_cubit.dart';
-import 'package:social_media/features/profile/presentation/pages/profile_page.dart';
 import 'package:social_media/features/storage/data/firebase_storage_repo.dart';
 import 'package:social_media/themes/light_mode.dart';
 
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
   final firebaseAuthRepo = FirebaseAuthRepo();
   final firebaseProfileRepo = FirebaseProfileRepo();
   final firebaseStorageRepo = FirebaseStorageRepo();
+  final postRepo = FirebasePostRepo();
 
   MyApp({super.key});
 
@@ -42,13 +44,19 @@ class MyApp extends StatelessWidget {
       providers: [
         // auth cubit
         BlocProvider<AuthCubit>(
-          create: (context) => AuthCubit(authRepo: firebaseAuthRepo)..checkAuth(),
+          create: (context) =>
+              AuthCubit(authRepo: firebaseAuthRepo)..checkAuth(),
         ),
         // profile cubit
         BlocProvider<ProfileCubit>(
-          create: (context) =>
-              ProfileCubit(profileRepo: firebaseProfileRepo, storageRepo: firebaseStorageRepo),
-        )
+          create: (context) => ProfileCubit(
+              profileRepo: firebaseProfileRepo,
+              storageRepo: firebaseStorageRepo),
+        ),
+        // posts cubit
+        BlocProvider(
+            create: (context) =>
+                PostCubit(postRepo: postRepo, storageRepo: firebaseStorageRepo))
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
