@@ -10,3 +10,9 @@
 - import to projects.
 - change manifest.json file src path with absolute path.
 - view page source and check link in manifest json.
+
+# code layout
+
+## 1. Làm phần header
+
+- header, navbar, logo.

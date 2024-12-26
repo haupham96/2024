@@ -32,3 +32,46 @@ select {
   font-size: inherit;
   font-family: inherit;
 }
+
+a {
+  text-decoration: none;
+}
+/*==================================== COMMON */
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+}
+
+/*==================================== HEADER */
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__list {
+  display: flex;
+}
+
+.navbar__link {
+  padding: 8px 18px;
+  color: #5e6085;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+}
+/*==================================== HERO */
+
+/*==================================== ABOUT */
+
+/*==================================== SERVICE */
+
+/*==================================== STAFF */
+
+/*==================================== PRICING */
+
+/*==================================== BLOG */
+
+/*==================================== FOOTER */
