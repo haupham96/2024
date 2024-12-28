@@ -44,6 +44,10 @@ a {
 }
 
 /*==================================== HEADER */
+.header {
+  padding: 26px 0;
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -54,13 +58,42 @@ a {
   display: flex;
 }
 
-.navbar__link {
+.navbar__link,
+.header-action__link {
   padding: 8px 18px;
   color: #5e6085;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 14px; /* 100% */
+}
+
+.navbar__link:hover {
+  color: #000958;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.btn {
+  --height: 56px;
+  display: inline-block;
+  min-width: 130px;
+  height: var(--height);
+  line-height: var(--height);
+  border-radius: 30px;
+  color: #000958;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 9, 88, 0.7);
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+.header-action__btn {
+  --height: 50px;
+  border-radius: 25px;
+  min-width: 118px;
 }
 /*==================================== HERO */
 
