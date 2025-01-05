@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breakpoints</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: orange;
+        font-family: system-ui, sans-serif;
+      }
+
+      h2 {
+        color: #fff;
+        font-size: 36px;
+        display: none;
+      }
+
+      /* small / phone */
+      @media screen and (max-width: 768.98px) {
+        .mobile {
+          display: block;
+        }
+        .pc,
+        .tablet {
+          display: none;
+        }
+      }
+
+      /* Tablet */
+      @media screen and (min-width: 769px) and (max-width: 991.98px) {
+        .tablet {
+          display: block;
+        }
+        .pc,
+        .mobile {
+          display: none;
+        }
+      }
+
+      /* PC */
+      @media screen and (min-width: 992px) {
+        .pc {
+          display: block;
+        }
+        .tablet,
+        .mobile {
+          display: none;
+        }
+      }
+      /* 
+      min(): đặt giá trị tối đa.
+      vd: width: min(100%, 500px); 
+      -> không thể nhỏ hơn 500px. nếu 100% = 600px thì min là 500px 
+      và hàm min(600px, 500px) = 500px.
+
+      Tương tự với max() để đặt giá trị tối thiểu.
+
+      clamp(min , ideal , max): đặt giá trị trong khoảng giữa min và max.
+      nếu nằm trong khoảng thì giá trị sẽ là ideal.
+      nếu nhỏ hơn min thì giá trị sẽ là min.
+      nếu lớn hơn max thì giá trị sẽ là max.
+      */
+    </style>
+  </head>
+  <body>
+    <h2 class="pc">PC</h2>
+    <h2 class="tablet">Tablet</h2>
+    <h2 class="mobile">Mobile</h2>
+  </body>
+</html>

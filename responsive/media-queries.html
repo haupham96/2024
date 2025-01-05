@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      @media screen and (max-width: 300px) {
+        body {
+          background: red;
+        }
+      }
+
+      @media screen and (min-width: 500px) {
+        body {
+          background: blue;
+        }
+      }
+
+      @media screen and (min-width: 301px) and (max-width: 499px) {
+        body {
+          background: green;
+        }
+      }
+
+      /* orientation: portraint | landscape. */
+      @media screen and (orientation: landscape) {
+        body {
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
